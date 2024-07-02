@@ -477,9 +477,18 @@ C main .section-hero {
 }
 
 .section-why--choose .text-align--right .why-choose--div {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
+  display: grid;
+  place-items: end;
+
+  & p {
+    text-align: right;
+  }
+
+  & .section-common--title {
+    width: 100%;
+    text-align: right;
+    font-size: 2.3rem;
+  }
 }
 
 .section-why--choose .text-align--left .why-choose--div {
@@ -955,6 +964,13 @@ footer {
   .custom-shape-divider-bottom-1711019306 svg {
     height: 80px;
   }
+
+  .section-why--choose .text-align--right .why-choose--div {
+
+    & .section-common--title {
+      font-size: 2rem;
+    }
+  }
 }
 
 @media (width <=1380px) {
@@ -1221,6 +1237,18 @@ footer {
   .section-why--choose .choose-center-div {
     & figure img {
       width: 70%;
+    }
+  }
+
+  .section-why--choose .text-align--right .why-choose--div {
+    place-items: start;
+
+    & p {
+      text-align: left;
+    }
+
+    & .section-common--title {
+      text-align: left;
     }
   }
 }
